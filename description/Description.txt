@@ -1,0 +1,23 @@
+Our Page is a simple splash screen having following sub parts:
+
+Main Function: Runs the app and sets MyApp as the root widget.
+
+MyApp: Sets up the MaterialApp with SplashScreen as the home screen and hides the debug banner.
+
+SplashScreen: A StatefulWidget with animations:
+           - Initially shows an animated opacity transition for the logo and text.
+           - The logo and text fade in after a delay of 500 milliseconds, and their sizes animate accordingly.
+           - The font is "lora" is used that is a google font and colors are used as mentioned.
+
+Animation in Splash Screen:
+                     - The _visible boolean controls the visibility of the animated widgets and called in initstate.
+                     - When the visible is set to true then the content of splash screen fadesin and chances its opacity from 0.0 (invisible) to 1.0 (fully visible) over 1 second.
+                     - Initially, the logo and text are invisible but after 500 milliseconds, both the logo's size and the text’s opacity animate into view.
+ Thus,the combination of AnimatedOpacity and AnimatedContainer creates a smooth transition effect.
+
+ 
+HomeScreen: An another screen that displays "Home Screen" in the center.
+
+Timer: After the delay of 3 seconds screen will navigates to the HomePage by using Navigator.PushReplacement.
+
+The splash screen has animated effects for showing and resizing the logo and fading in text.
